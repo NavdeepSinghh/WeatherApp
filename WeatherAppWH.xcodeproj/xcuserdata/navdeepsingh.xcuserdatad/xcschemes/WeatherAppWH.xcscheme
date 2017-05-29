@@ -38,6 +38,16 @@
                ReferencedContainer = "container:WeatherAppWH.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1B16B511EDC445100367128"
+               BuildableName = "WeatherAppWHMockTests.xctest"
+               BlueprintName = "WeatherAppWHMockTests"
+               ReferencedContainer = "container:WeatherAppWH.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

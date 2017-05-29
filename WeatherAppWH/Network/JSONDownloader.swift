@@ -10,7 +10,7 @@ import Foundation
 
 class JSONDownloader {
     
-    let session : URLSession
+    let session : MockURLSession
     
     init(configuration : URLSessionConfiguration) {
         self.session = URLSession(configuration: configuration)
