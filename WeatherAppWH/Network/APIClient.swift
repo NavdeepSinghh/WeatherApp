@@ -21,5 +21,13 @@ class APIClient {
     
     func getWeather(at location: Location, completionHandler completion: @escaping WeatherCompletionhandler){
         
+        guard let url = URL(string: location.description, relativeTo: baseURL) else {
+            completion(nil, .invalidURL)
+            return
+        }
+        let request = URLRequest(url: url)
+        let task = downloader.jsonTask(with: request) { (json, error) in
+            
+        }
     }
 }
