@@ -17,7 +17,7 @@ class APIClient {
     }()
     
     // For testing purpose make it var
-    var downloader = JSONDownloader()
+    let downloader = JSONDownloader()
     typealias WeatherCompletionhandler = (CurrentWeather?, DarkSkyError?) -> Void
     
     func getWeather(at location: Location, completionHandler completion: @escaping WeatherCompletionhandler){

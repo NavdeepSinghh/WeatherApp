@@ -23,15 +23,16 @@ class WeatherAppWHMockTests: XCTestCase {
         let urlResponse = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
         
         //  Create mock session using the above mentioned values
-        let sessionMock = URLSessionMock(data: data, response: urlResponse, error: nil)
-        clientToTest.downloader = JSONDownloader(session : sessionMock)
+        //let sessionMock = URLSessionMock(data: data, response: urlResponse, error: nil)
+        //clientToTest.downloader = JSONDownloader(session : sessionMock)
         
     }
     
     func testGetWeatherData(){
         //given
         let promise = expectation(description: "Status code: 200")
-        var temperature = 0.0
+        
+        var viewModel : CurrentWeatherViewModel!
         //when
         let location = Location(latitude: 33.8650, longitude: 151.2094)
         clientToTest.getWeather(at: location) { [unowned self] (currentWeather, error) in
@@ -44,7 +45,7 @@ class WeatherAppWHMockTests: XCTestCase {
         waitForExpectations(timeout: 4, handler: nil)
         
         //then
-        XCTAssertEqual(temperature, 53 , "Couldn't parse properly")
+        XCTAssertEqual(viewModel.temperatute, "53" , "Couldn't parse properly")
     }
     
     override func tearDown() {

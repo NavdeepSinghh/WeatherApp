@@ -37,6 +37,12 @@ class WeatherVC: UIViewController {
                 let viewModel = CurrentWeatherViewModel(model: currentWeather)
                 self.displayWeather(using: viewModel)
                 self.toggleRefreshAnimation(on : false)
+            } else if let error = error {
+                let alert = UIAlertController.init(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: { (_) in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
