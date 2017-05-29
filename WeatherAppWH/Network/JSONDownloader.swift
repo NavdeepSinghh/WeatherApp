@@ -16,6 +16,11 @@ class JSONDownloader {
         self.session = URLSession(configuration: configuration)
     }
     
+    // For testing purpose
+    init(session : MockURLSession) {
+        self.session = session
+    }
+    
     convenience init() {
         self.init(configuration : .default)
     }
