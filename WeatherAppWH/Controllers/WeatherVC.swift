@@ -53,7 +53,11 @@ class WeatherVC: UIViewController {
     
     
     func displayWeather(using weather: CurrentWeatherViewModel){
-        
+        self.currentTemperatureLabel.text = weather.temperatute
+        self.currentHumidityLabel.text = weather.humidity
+        self.currentPrecipitationLabel.text = weather.precipitationProb
+        self.currentWeatherIcon.image = weather.icon
+        self.currentSummaryLabel.text = weather.summary
     }
 
 }
