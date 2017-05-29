@@ -15,6 +15,6 @@ struct Location {
 
 extension Location : CustomStringConvertible {
     var description : String{
-        return "\(latitude), \(longitude)"
+        return "\(latitude),\(longitude)"
     }
 }

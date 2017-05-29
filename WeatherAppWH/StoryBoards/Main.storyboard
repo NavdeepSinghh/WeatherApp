@@ -56,6 +56,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-F5-Mr7">
                                 <rect key="frame" x="166" y="52" width="43" height="43"/>
                                 <state key="normal" image="refresh"/>
+                                <connections>
+                                    <action selector="getCurrWeather" destination="xQ2-qR-JKI" eventType="touchUpInside" id="qAJ-Wb-nNE"/>
+                                    <action selector="getCurrWeather:" destination="xQ2-qR-JKI" eventType="touchUpInside" id="P4F-Cc-gsu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-nh-vSS">
                                 <rect key="frame" x="248.5" y="433.5" width="38.5" height="20.5"/>
