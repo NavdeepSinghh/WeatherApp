@@ -13,6 +13,8 @@
 		F17D903A1EDBDFFC00C7A247 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D90391EDBDFFC00C7A247 /* CurrentWeather.swift */; };
 		F17D903D1EDBE0B200C7A247 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D903C1EDBE0B200C7A247 /* WeatherIcon.swift */; };
 		F17D903F1EDBE4CD00C7A247 /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D903E1EDBE4CD00C7A247 /* CurrentWeatherViewModel.swift */; };
+		F17D90481EDC0B8400C7A247 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D90471EDC0B8400C7A247 /* JSONDownloader.swift */; };
+		F17D904B1EDC0E8D00C7A247 /* DarkSkyErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D904A1EDC0E8D00C7A247 /* DarkSkyErrors.swift */; };
 		F1C66D7F1EDA81A300D3FD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C66D7E1EDA81A300D3FD38 /* AppDelegate.swift */; };
 		F1C66D861EDA81A400D3FD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C66D851EDA81A400D3FD38 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 		F17D90391EDBDFFC00C7A247 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		F17D903C1EDBE0B200C7A247 /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 		F17D903E1EDBE4CD00C7A247 /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
+		F17D90471EDC0B8400C7A247 /* JSONDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
+		F17D904A1EDC0E8D00C7A247 /* DarkSkyErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyErrors.swift; sourceTree = "<group>"; };
 		F1C66D7B1EDA81A300D3FD38 /* WeatherAppWH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppWH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C66D7E1EDA81A300D3FD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C66D851EDA81A400D3FD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +96,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F17D90461EDC0B5800C7A247 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F17D90491EDC0E7600C7A247 /* Errors */,
+				F17D90471EDC0B8400C7A247 /* JSONDownloader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F17D90491EDC0E7600C7A247 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				F17D904A1EDC0E8D00C7A247 /* DarkSkyErrors.swift */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
 		F1C66D721EDA81A300D3FD38 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +132,7 @@
 		F1C66D7D1EDA81A300D3FD38 /* WeatherAppWH */ = {
 			isa = PBXGroup;
 			children = (
+				F17D90461EDC0B5800C7A247 /* Network */,
 				F17D903B1EDBE04C00C7A247 /* Models */,
 				F17D902D1EDBC5D600C7A247 /* StoryBoards */,
 				F17D90321EDBC6A100C7A247 /* SupportingFiles */,
@@ -193,11 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17D90481EDC0B8400C7A247 /* JSONDownloader.swift in Sources */,
 				F1C66D7F1EDA81A300D3FD38 /* AppDelegate.swift in Sources */,
 				F17D903D1EDBE0B200C7A247 /* WeatherIcon.swift in Sources */,
 				F17D903F1EDBE4CD00C7A247 /* CurrentWeatherViewModel.swift in Sources */,
 				F17D903A1EDBDFFC00C7A247 /* CurrentWeather.swift in Sources */,
 				F17D90381EDBDB3500C7A247 /* WeatherVC.swift in Sources */,
+				F17D904B1EDC0E8D00C7A247 /* DarkSkyErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
